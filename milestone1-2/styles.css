@@ -1,15 +1,15 @@
 /* General Styling */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(202, 192, 252);
     margin: 0;
     padding: 150px;
 }
 
 .resume-container {
     display: flex;
-    background-color: white;
-    width: 100%;
+    background-color: #f2f2f2;
+    width: 1000px;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -17,13 +17,13 @@ body {
 
 /* Left Section Styling */
 .left-section {
-    background-color: #2c2c2c;
+    background-color: #11013a;
     color: white;
     border-radius: 10px;
     padding: 20px;
     width: 40%;
     text-align: center;
-    border-right: 5px solid #e63946;
+    border-right: 5px solid #0089e5;
 }
 
 .profile-picture {
@@ -31,7 +31,7 @@ body {
     height: 150px;
     margin-top: 10%;
     border-radius: 50%;
-    border: 5px solid #e63946;
+    border: 5px solid #0089e5;
     margin-bottom: 20px;
 }
 
@@ -48,9 +48,9 @@ h3 {
     font-size: 24px;
     padding: 5px 6px 6px 5px;
     margin: 20px 0 10px;
-    color: black;
+    color: #11013a;
     border-radius: 10px;
-    box-shadow: 0 0 15px #e63946;
+    box-shadow: 0 0 15px #0089e5;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -81,13 +81,13 @@ button {
     font-family: "Monteserrat", sans-serif;
     padding: 8px 12px 12px 8px;
     border-radius: 10px;
-    box-shadow: 0 0 15px black;
+    box-shadow: 5 5 4px #11013a;
     cursor: pointer;
     margin-top: 10px;
     font-size: 18px;
 }
 
 button:hover {
-    background-color: #2f2f2f;
+    background-color: #11013a;
     color: white;
 }
