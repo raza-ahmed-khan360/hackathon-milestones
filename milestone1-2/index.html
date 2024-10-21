@@ -3,67 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Interactive Resume</title>
+    <meta name="description" content="Static interactive resume of Raza Ahmed, UI/UX Designer and Junior Figma Designer at Timegram.">
+    <title>Raza Ahmed's Interactive Resume</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <div class="resume-container">
-        <!-- Left Section-->
-         <div class="left-section">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="profile.jpg" alt="Profile Picture of Raza Ahmed" class="profile-picture">
+            
+            <!-- Career Objective Section -->
             <section id="objective">
-                <h3 style="color: white;">Career Objective</h3>
-                <p class="text">Creative and detail-oriented UI/UX designer with a passion for creating intuitive and visually appealing user experiences. Seeking to leverage my skills in user research, wireframing, prototyping, and responsive design to contribute to innovative projects and enhance user satisfaction. Ready to collaborate with cross-functional teams to solve complex design challenges and drive impactful results.</p>
-            </section>
-            <section id="certification">
-                <h3 style="color: white;">Certifications</h3>
+                <h3 class="section-title" style="color: white;">Career Objective</h3>
                 <p class="text">
-                    <div style="text-align: left;">
-                       <ul>
-                        <li>HTML, CSS, and TypeScript</li>
-                       </ul>
-                    </div>
+                    Creative and detail-oriented UI/UX designer with a passion for creating intuitive and visually appealing user experiences. 
+                    Seeking to leverage my skills in user research, wireframing, prototyping, and responsive design to contribute to innovative projects 
+                    and enhance user satisfaction. Ready to collaborate with cross-functional teams to solve complex design challenges and drive impactful results.
                 </p>
-            </section>    
+            </section>
+            
+            <!-- Certifications Section -->
+            <section id="certification">
+                <h3 class="section-title" style="color: white;">Certifications</h3>
+                <ul class="text">
+                    <li>HTML, CSS, and TypeScript</li>
+                </ul>
+            </section>
+        </div>
 
-         </div>
-         <!-- Right Section-->
-         <div class="right-section">
-            <h1>STATIC INTERRACTIVE RESUME</h1>
-            <!-- Personal Information-->
-             <section id="personal-info">
-                <h3>Personal Information</h3>
+        <!-- Right Section -->
+        <div class="right-section">
+            <h1 class="main-title">Static Interactive Resume</h1>
+
+            <!-- Personal Information Section -->
+            <section id="personal-info">
+                <h3 class="section-title">Personal Information</h3>
                 <p><b>Name:</b> Raza Ahmed</p>
                 <p><b>Phone:</b> +123 456 789</p>
-                <p><b>Email:</b> <a href="mailto:razaahmedkhan360@gmail.com"> Mail here</a></p>
+                <p><b>Email:</b> <a href="mailto:razaahmedkhan360@gmail.com" aria-label="Email Raza Ahmed">Mail here</a></p>
             </section>
-            <!--Education Section-->
-             <section id="education">
-                <h3>Education</h3>
-                <p><b>Inter:</b> Pre-Engineering from D.J Science College, Karachi (in 1st year) </p>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h3 class="section-title">Education</h3>
+                <p><b>Inter:</b> Pre-Engineering from D.J Science College, Karachi (1st Year)</p>
                 <p><b>Matriculation:</b> The Times School, Karachi</p>
             </section>
-            <!--Skills Section-->
+
+            <!-- Skills Section -->
             <section id="skills">
-                <h3>Skills</h3>
-                <ul>
+                <h3 class="section-title">Skills</h3>
+                <ul class="text">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>TypeScript</li>
-                    <li>NextJs</li>
+                    <li>Next.js</li>
                     <li>C++</li>
                 </ul>
             </section>
-            <!--Work Experience Section-->
+
+            <!-- Work Experience Section -->
             <section id="work-experience">
-                <h3>Work Experience</h3>
+                <h3 class="section-title">Work Experience</h3>
                 <p><b>Company:</b> Timegram</p>
                 <p><b>Role:</b> Junior Figma Designer</p>    
             </section>
-            <!--Button to toggle skill section -->
-            <button id="toggle-skills"><strong>Hide/Show Skills</strong></button>
-         </div>
+
+            <!-- Button to Toggle Skills Section -->
+            <button id="toggle-skills" aria-label="Toggle Skills Section">
+                <strong>Hide/Show Skills</strong>
+            </button>
+        </div>
     </div>
+
+    <!-- External Script File -->
     <script src="script.js"></script>
 </body>
 </html>
