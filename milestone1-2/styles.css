@@ -117,7 +117,7 @@ button:hover {
     }
 
     .left-section, .right-section {
-        width: 100%;
+        width: auto;
     }
 
     .profile-picture {
