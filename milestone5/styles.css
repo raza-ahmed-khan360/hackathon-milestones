@@ -239,7 +239,7 @@ button#download-resume:hover {
     body {
         width: 210mm; /* A4 width */
         height: 297mm; /* A4 height */
-        font-size: 13px; /* Scale down font size for printing */
+        font-size: 16px; /* Scale down font size for printing */
         margin: 0; /* Remove margin to maximize space */
         padding: 0;
     }
@@ -260,8 +260,8 @@ button#download-resume:hover {
         font-size: 18px; /* Reduce heading font size */
     }
 
-    .text, ul li {
-        font-size: 13px; /* Scale down text */
+    .text{
+        font-size: 16px; /* Scale down text */
     }
 
     button {
@@ -286,7 +286,7 @@ button#download-resume:hover {
     }
 
     .text {
-        font-size: 12px;
+        font-size: 16px;
     }
     .right-section {
         width: 60%;
@@ -312,7 +312,7 @@ button#download-resume:hover {
         width: 200px;
     }
 
-    .text, ul li {
+    .text{
         font-size: 16px;
     }
 
