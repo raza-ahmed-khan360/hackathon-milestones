@@ -90,9 +90,9 @@ form.addEventListener("submit", (event: Event) => {
                 <!-- Personal Information Section -->
                 <section id="personal-info">
                     <h3 class="section-title">Personal Information</h3>
-                    <p><b>Name:</b><span contenteditable="true">${name}</span></p>
-                    <p><b>Phone:</b><span contenteditable="true">${phone}</span></p>
-                    <p><b>Email:</b><span contenteditable="true">${email}</span></p>
+                    <p><b>Name: </b><span contenteditable="true">${name}</span></p>
+                    <p><b>Phone: </b><span contenteditable="true">${phone}</span></p>
+                    <p><b>Email: </b><span contenteditable="true">${email}</span></p>
                 </section>
 
                 <!-- Education Section -->
