@@ -305,6 +305,7 @@ button#download-resume:hover {
 /* Responsive Design */
 @media (min-width: 768px) {
     .resume-container {
+        width: 100%;
         flex-direction: row;
         page-break-inside: avoid;
     }
