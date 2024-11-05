@@ -1,17 +1,35 @@
-/* Base styles (shared across all themes) */
+/* Reset and Accessibility Improvements */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #11013a;
+    --secondary-color: #0089e5;
+    --background-color: #f5f7fa;
+    --text-color: #2c3e50;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     margin: 20px;
     padding: 0;
-    background-color: whitesmoke;
-    color: #11013a;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
 h1, h3 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    color: #11013a;
+    color: var(--primary-color);
 }
 
 h1 {
@@ -24,7 +42,7 @@ h3 {
     margin: 20px 0;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0 0 15px #0089e5;
+    box-shadow: 0 0 15px var(--secondary-color);
 }
 
 .text {
@@ -56,9 +74,10 @@ button {
 }
 
 button:hover {
-    color: #0089e5;
+    color: var(--secondary-color);
 }
 
+/* Form Elements */
 input, textarea {
     width: calc(100% - 1px);
     margin-top: 4px;
@@ -90,20 +109,17 @@ legend, label {
     text-align: left;
 }
 
-label {
-    margin-top: 10px;
-}
-
+/* Profile Picture */
 .profile-picture {
     width: 150px;
     height: 150px;
     margin-top: 10%;
     border-radius: 50%;
-    border: 5px solid #0089e5;
+    border: 5px solid var(--secondary-color);
     margin-bottom: 20px;
-    page-break-inside: avoid;
 }
 
+/* Layout */
 .resume-container {
     display: flex;
     background-color: #f2f2f2;
@@ -114,24 +130,21 @@ label {
     padding: 20px;
 }
 
-/* Left Section */
 .left-section {
-    background-color: #11013a;
+    background-color: var(--primary-color);
     color: white;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    page-break-inside: avoid;
 }
 
 .right-section {
     padding: 20px;
-    page-break-inside: avoid;
 }
 
 /* Button Styles */
 button#download-resume {
-    background-color: #0089e5;
+    background-color: var(--secondary-color);
     color: white;
     border-radius: 8px;
     padding: 12px 24px;
@@ -148,21 +161,9 @@ button#download-resume:hover {
     color: #11013a;
 }
 
-.cool-theme .left-section {
-    background-color: #11013a;
+.cool-theme .left-section, .cool-theme button, .cool-theme button#download-resume {
+    background-color: var(--primary-color);
     color: white;
-}
-
-.cool-theme .profile-picture {
-    border-color: #0089e5;
-}
-
-.cool-theme button, .cool-theme button#download-resume {
-    background-color: #11013a;
-}
-
-.cool-theme button:hover, .cool-theme button#download-resume:hover {
-    background-color: #005bb5;
 }
 
 .warm-theme body {
@@ -170,43 +171,9 @@ button#download-resume:hover {
     color: #4a2511;
 }
 
-.warm-theme .left-section {
-    background-color: #d84315;
-    color: white;
-}
-
-.warm-theme .profile-picture {
-    border-color: #ffb74d;
-}
-
-.warm-theme button, .warm-theme button#download-resume {
-    background-color: #ff8f00;
-}
-
-.warm-theme button:hover, .warm-theme button#download-resume:hover {
-    background-color: #ef6c00;
-}
-
 .premium-theme body {
     background-color: #f5f5f5;
     color: #2c003e;
-}
-
-.premium-theme .left-section {
-    background-color: #4b0082;
-    color: white;
-}
-
-.premium-theme .profile-picture {
-    border-color: #d4af37;
-}
-
-.premium-theme button, .premium-theme button#download-resume {
-    background-color: #6a0dad;
-}
-
-.premium-theme button:hover, .premium-theme button#download-resume:hover {
-    background-color: #3b006a;
 }
 
 .professional-theme body {
@@ -214,110 +181,60 @@ button#download-resume:hover {
     color: #2e2e2e;
 }
 
-.professional-theme .left-section {
-    background-color: #333333;
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.professional-theme .profile-picture {
-    border-color: #0073e6;
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.professional-theme button, .professional-theme button#download-resume {
-    background-color: #0073e6;
+.form-group {
+    margin-bottom: 1rem;
 }
 
-.professional-theme button:hover, .professional-theme button#download-resume:hover {
-    background-color: #005bb5;
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--border-radius);
 }
 
-/* A4 Page Styling */
-@media print {
-    body {
-        width: 210mm; /* A4 width */
-        height: 297mm; /* A4 height */
-        font-size: 12px; /* Scale down font size for printing */
-        margin: 0;
-        padding: 0;
-        background-color: white; /* Ensure white background */
-    }
-
-    .resume-container {
-        page-break-inside: avoid; /* Avoid splitting */
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .left-section, .right-section {
-        page-break-inside: avoid; /* Prevent splitting between sections */
-        width: 100%; /* Use full width */
-        display: block;
-    }
-
-    h1, h3 {
-        font-size: 14px; /* Adjust heading size for print */
-        page-break-inside: avoid; /* Prevent splitting headings */
-    }
-
-    .text, ul, ul li, label, fieldset, legend {
-        font-size: 12px; /* Scale down text */
-        page-break-inside: avoid; /* Prevent splitting */
-    }
-
-    .profile-picture {
-        width: 80px; /* Reduce profile picture size */
-        height: 80px;
-        page-break-inside: avoid; /* Prevent splitting */
-    }
-
-    button, input, textarea {
-        display: none; /* Hide interactive elements */
-    }
-
-    form {
-        page-break-inside: avoid; /* Prevent breaking forms */
-        margin: 0;
-        padding: 0;
-    }
-
-    fieldset {
-        page-break-inside: avoid; /* Prevent fieldset breaks */
-    }
-    
-    /* Reduce all margins and paddings for compact layout */
-    .resume-container, .left-section, .right-section, form, fieldset, .text, h1, h3, ul, ul li {
-        margin: 0;
-        padding: 0;
-        page-break-inside: avoid; /* Ensure no splitting inside */
-    }
-
-    /* Add this to compress everything more tightly */
-    * {
-        margin: 0;
-        padding: 0;
-        line-height: 1.1; /* Compress line spacing */
-        page-break-inside: avoid; /* Prevent page breaks inside any element */
-    }
+.form-input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 137, 229, 0.1);
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
     .resume-container {
         flex-direction: row;
-        page-break-inside: avoid;
     }
 
     .left-section {
         width: 40%;
-        border-right: 5px solid #0089e5;
-        page-break-inside: avoid;
+        border-right: 5px solid var(--secondary-color);
     }
 
     .right-section {
         width: 60%;
-        page-break-inside: avoid;
     }
 
     .text {
@@ -326,8 +243,8 @@ button#download-resume:hover {
 }
 
 @media (max-width: 767px) {
-    body {
-        padding: 20px;
+    .container {
+        padding: 1rem;
     }
 
     .profile-picture {
@@ -343,12 +260,32 @@ button#download-resume:hover {
         font-size: 18px;
     }
 
-    .text {
-        font-size: 16px;
-    }
-
     button {
         font-size: 12px;
         padding: 6px 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+
+    .resume-container {
+        page-break-inside: avoid;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    button, input, textarea {
+        display: none;
     }
 }
