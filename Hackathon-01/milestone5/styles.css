@@ -161,9 +161,21 @@ button#download-resume:hover {
     color: #11013a;
 }
 
-.cool-theme .left-section, .cool-theme button, .cool-theme button#download-resume {
-    background-color: var(--primary-color);
+.cool-theme .left-section {
+    background-color: #11013a;
     color: white;
+}
+
+.cool-theme .profile-picture {
+    border-color: #0089e5;
+}
+
+.cool-theme button, .cool-theme button#download-resume {
+    background-color: #11013a;
+}
+
+.cool-theme button:hover, .cool-theme button#download-resume:hover {
+    background-color: #005bb5;
 }
 
 .warm-theme body {
@@ -171,14 +183,65 @@ button#download-resume:hover {
     color: #4a2511;
 }
 
+.warm-theme .left-section {
+    background-color: #d84315;
+    color: white;
+}
+
+.warm-theme .profile-picture {
+    border-color: #ffb74d;
+}
+
+.warm-theme button, .warm-theme button#download-resume {
+    background-color: #ff8f00;
+}
+
+.warm-theme button:hover, .warm-theme button#download-resume:hover {
+    background-color: #ef6c00;
+}
+
 .premium-theme body {
     background-color: #f5f5f5;
     color: #2c003e;
 }
 
+.premium-theme .left-section {
+    background-color: #4b0082;
+    color: white;
+}
+
+.premium-theme .profile-picture {
+    border-color: #d4af37;
+}
+
+.premium-theme button, .premium-theme button#download-resume {
+    background-color: #6a0dad;
+}
+
+.premium-theme button:hover, .premium-theme button#download-resume:hover {
+    background-color: #3b006a;
+}
+
 .professional-theme body {
     background-color: #eaeaea;
     color: #2e2e2e;
+}
+
+.professional-theme .left-section {
+    background-color: #333333;
+    color: white;
+}
+
+.professional-theme .profile-picture {
+    border-color: #0073e6;
+}
+
+.professional-theme button, .professional-theme button#download-resume {
+    background-color: #0073e6;
+}
+
+.professional-theme button:hover, .professional-theme button#download-resume:hover {
+    background-color: #005bb5;
 }
 
 /* Container Styles */
