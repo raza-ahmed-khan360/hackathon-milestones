@@ -1,70 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Resume Builder</title>
+    <title>Resume Craft - Build Your Professional Identity</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Resume Craft</h1>
+      <p class="subtitle">Build Your Professional Identity</p>
 
-<body class="cool-theme">
+      <form id="resume-form" class="form-container">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group full-width">
+            <label for="objective">Career Objective</label>
+            <textarea id="objective" name="objective" rows="3"></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="education">Education</label>
+            <textarea id="education" name="education" rows="3"></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="experience">Work Experience</label>
+            <textarea id="experience" name="experience" rows="3"></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="skills">Skills</label>
+            <textarea id="skills" name="skills" rows="3"></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="certifications">Certifications</label>
+            <textarea
+              id="certifications"
+              name="certifications"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="imageInput">Profile Picture</label>
+            <input
+              type="file"
+              id="imageInput"
+              name="imageInput"
+              accept="image/*"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="theme-selector">Select Resume Theme</label>
+            <select id="theme-selector" name="theme-selector">
+              <option value="Cool Blue">Cool Blue</option>
+              <option value="Warm Sunset">Warm Sunset</option>
+              <option value="Professional Gray">Professional Gray</option>
+              <option value="Premium Purple">Premium Purple</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Generate Resume</button>
+          <button type="reset">Reset Form</button>
+        </div>
+      </form>
 
-    <h1>Professional Resume Builder</h1>
-    <!-- Form Section -->
-    <form id="resume-form" class="form-container">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required placeholder="Enter your username"/>
-
-        <label for="name">Name:</label>
-        <input type="text" id="name" required placeholder="Enter your name"/>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required placeholder="Enter your email"/>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" required placeholder="Enter your phone number"/>
-
-        <label for="objective">Objective:</label>
-        <textarea id="objective" placeholder="Enter your objective"></textarea>
-
-        <label for="certifications">Certifications:</label>
-        <textarea id="certifications" placeholder="Enter your certifications"></textarea>
-
-
-        <label for="education">Education:</label>
-        <textarea id="education" placeholder="Enter your education"></textarea>
-
-        <label for="experience">Experience:</label>
-        <textarea id="experience" placeholder="Enter your experience"></textarea>
-
-        <label for="skills">Skills:</label>
-        <textarea id="skills" placeholder="Enter your skills"></textarea>
-
-        <label for="imageInput">Upload Image:</label>
-        <input type="file" id="imageInput" accept="image/*" />
-
-        <label for="theme-selector">Select Theme:</label>
-        <select id="theme-selector">
-            <option value="cool-theme">Cool</option>
-            <option value="warm-theme">Warm</option>
-            <option value="professional-theme">Professional</option>
-            <option value="premium-theme">Premium</option>
-        </select>
-
-        <button type="submit" style="color: aliceblue;">Generate Resume</button>
-    </form>
-    <br>
-
-    <!-- Resume Display Section -->
-    <div id="resume-display" class="resume-display"></div>
-    <div id="shareable-link-container" class="hidden">
-        <p>Shareable Link: <a id="shareable-link" target="_blank"></a></p>
+      <div id="resume-output" class="section resume-output">
+        <div id="resume-display" class="resume-preview"></div>
+        <div id="shareable-link-container" class="shareable-section">
+          <h3>Shareable Resume Link</h3>
+          <a href="#" id="shareable-link" class="link-highlight" target="_blank"
+            >Generate to get link</a
+          >
+          <button id="download-pdf">Download PDF</button>
+        </div>
+      </div>
     </div>
-    <button id="download-pdf" style="color: aliceblue;">Download as PDF</button>
 
+    <footer>
+      <p>© 2024 Resume Craft. Create Your Professional Identity.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
